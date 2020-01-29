@@ -1,0 +1,55 @@
+/** Indicarle a GIT quien eres tu. */
+git config --global user.name "miguel.barrera"
+git config --global user.email "bfmikea@gmail.com"
+/** Para ver el usuario de GIT actual */
+git config --global -l
+/** Crear primer repositorio */
+git init
+/** Ver el estado control de cambios */
+git status
+/** Agregar al stage los archivos y controlarlos */
+git add .
+git add -A
+git add --all
+/** Para registrar algun cambio */
+git commit -m "Commit inicial"
+/** Ver los cambios realizados desde el ultimo commit */
+git diff
+/** Ver el historico de cambios */
+git log
+/** Eliminar control cambio de elementos ya agregados */
+git reset 
+/** Crear Alias a los comandos */
+git config --global alias.nombreAlias "elComando"
+/** Al comando log le estoy poniendo el alias l */
+git config --global alias.l "log"
+/** Corregir mensaje de commit */
+git commit --amend -m "Mensaje corregido"
+/** Crear nueva rama */
+git branch nuevaRama
+/** Movernos a una rama determinada */
+git checkout nombreRama
+/** Movernos a la rama principal */
+git checkout master
+/** Historico de cambios mas detallado */
+git log --online --decorate --all --graph
+/** Para unir ramas usando merge(fast fordward) */
+git merge nombreRama
+/** Para eliminar rama */
+git branch -d nombreRama
+/** Crear una etiqueta */
+git tag nombreEtiqueta
+/** Elininar etiqueta */
+git tag -d nombreEtiqueta
+/** Crear etiqueta en commit determinado */
+git tag -a v0.0.1 idCommit -m "Version beta"
+/** Enlazar repositorio local con uno en remoto en github */
+git remote add origin https://github.com/usuario/nombreRepo.git
+/** Subiendo (push) proyecto a github */
+git push -u origin master
+/** Descargando (clone) proyecto en github */
+git clone https://github.com/usuario/nombreRepo.git
+/** Descargar ultimos cambios repo github(pull o fetch) */ 
+git pull
+/** Bifurcación(fork) repo github a repo github personal */
+/** Pull requests para trabajo colaborativo */
